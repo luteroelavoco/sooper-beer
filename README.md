@@ -1,58 +1,108 @@
-<p>
-  <img width="112" alt="screen shot 2016-10-25 at 2 37 27 pm" src="https://cloud.githubusercontent.com/assets/13041/19686250/971bf7f8-9ac0-11e6-975c-188defd82df1.png">
-</p>
+# Sooper Beers
+>A simple beers catalogs 
 
-# Code Pro Inc Base - Next.js Starter Project
+This web-site was created to show a list of beers, enjoy the project.
 
-- A Api não me permitiu fazer uma boa paginação, ela não retorna a quantidade de itens disponiveis por pesquisa !!
+![](public/home_page.png)	
 
-## Estrutura do projeto
+
+## Instalation 	
+
+Go to project terminal and run the code below 	
+
+```sh	
+yarn install	
+```	
+
+After all dependecies installed	
+
+**To run**	
+
+```sh	
+yarn dev 	
+```	
+
+## Features
+- [ReactJs](https://reactjs.org/)
+- [NextJS](https://nextjs.org/)
+- [Vercel](https://vercel.com/)
+- [Less](http://lesscss.org/)
+- [Eslint](https://eslint.org/)
+- [prettier](https://prettier.io/)
+
+
+## Project structure
 ```
 .
+
 ├── src/
-|   ├── components/                 # Todos os componentes do projecto.
-|   |   ├── example/                # Cada componente em sua devida pasta.
-|   |   |   ├── index.js            # Cada pasta do seu componente com um index.js para exportar o componente e suas variações.
-|   |   |   ├── example.js
-|   |   |   ├── example.test.js
-|   |   |   └── example.scss
-|   |   ├── ...
-|   |   └── index.js                # Exportação de todos os componentes para se utilizar nas páginas.
-|   ├── helpers/                    # Helpers do projecto.
-|   |   └── ...                     # Alguns outros helpers (ex: media, transform...).
-|   ├── lib/                        # High-order components.
-|   |   ├── ...
-|   ├── pages/                      # As paginas que compoem o projecto.
-|   |   ├── about/
-|   |   |   └── index.js            # Página inicial.
-|   |   ├── ...
-|   |   └── index.js                # Página inicial.
-|   ├── requests/                   # Funções para realizar os requests na API.
-|   |   └── ...
-|   ├── styles/                     # Estilos globais da aplicação.
-|   |   ├── ...
-|   |   └── index.scss              # Arquivo de entry para os estilos.
-|   └── config.js                   # Arquivo contendo as URL's da API.
-├── routes.js
-├── server.js
+|   ├── components/                 # all components of project
+|   |   ├── Layout/                  
+|   |   |   ├── index.tsx           # define the main structure of the project
+|   |   |   ├── styles.less         # styling of components
+|   |   ├── Nav/
+|   |   |   ├── helpers/
+|   |   |   |   ├── index.ts        # functions and vars used in nav    
+|   |   |   ├── LeftMenu/           
+|   |   |   |   ├── index.ts        # left nav bar components
+|   |   |   |   ├── index.less      # styling of component
+|   |   |   ├── RigthMenu/
+|   |   |   |   ├── index.ts        # right nav bar components
+|   |   |   |   ├── index.less      # styling of component
+|   |   |   ├── index.tsx           # component that allows browse the pages 
+|   |   |   ├── styles.less           # styling of components
+|   |   ├── List      
+|   |   |   ├── index.tsx           # component that allows the listing of beers
+|   |   |   ├── styles.less         # styling of components
+|   |   ├── Card/              
+|   |   |   ├── index.tsx           # card that shows beer information
+|   |   |   ├── styles.less           # styling of components
+|   |   ├── ListTrending
+|   |   |   ├── helpers/
+|   |   |   |   ├── slider.ts       # slider settings 
+|   |   |   ├── index.tsx           # component that allows the listing of trending anime
+|   |   |   ├── styles.less         # styling of components
+|   |   ├── Form/             
+|   |   |   ├── index.tsx           # ca simple form to input new beer
+|   |   |   ├── styles.less         # styling of components
+|   |   ├── Pagination/
+|   |   |   ├── index.tsx           # component that lets you page beers results      
+|   ├── pages/                      # all project pages.
+|   |   ├── \_app.tsx               
+|   |   ├── \_document.tsx          
+|   |   └── index.tsx               # index page
+|   |   └── new.tsx                 # page to input a new beer
+|   ├── context/                    # global states
+|   |   └── search.tsx                   
+|   |   └── beer.tsx                       
+|   ├── services/                   # all project external services
+|   |   └── api.ts                  # axios elements initilized to call external resources
+|   |   └── index.ts                # list of function to call api
+|   ├── styles/                     # all project pages.
+|   |   ├── pages/         
+|   |   |   └── Home.less              
+|   |   └── global.less             # global style of project 
+|   |   └── theme.less              # project theme
+|   ├── utils/                      # all project utils.
+|   |   ├── debounce.ts
+|   ├── types/                      # all project types.
+|   |   ├── debounce.ts
 ├── README.md
 └── ...
 ```
 
-## Scripts
+## Meta	
 
-- `dev` : Inicia o desenvolvimento da aplicação em "http://localhost:3000";
-- `build` : Constroi a aplicação em modo **produção** no diretório `dist/` no root do projecto;
-- `start` : Inicia um servidor na **porta 3000** em "http://localhost:3000";
-- `lint` : Roda o eslint e stylelint em todo o projecto.
+Author - Lutero Elavoco
 
-Outros scripts podem ser encontrados no arquivo `package.json`.
+programmer -  [Lutero Elavoco](https://www.linkedin.com/in/l%C3%BAtero-elavoco-5951b619b/) - luteroelavoco90@gmail.com	
 
-## Features
-- [SASS](https://sass-lang.com/)
-- [Stylelint](https://stylelint.io/)
-- [Eslint](https://eslint.org/)
+https://heroanime.vercel.app/
 
-## Sugestões de plugins para VSCode
-- [Eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
-- [Stylelint](https://marketplace.visualstudio.com/items?itemName=shinnn.stylelint)
+## Contributing 	
+
+1. Fork it (https://github.com/luteroelavoco/sooper-beer)	
+2. Create your feature branch (`git checkout -b feature/fooBar`)	
+3. Commit your changes (`git commit -am 'Add some fooBar'`)	
+4. Push to the branch (`git push origin feature/fooBar`)	
+5. Create a new Pull Request
