@@ -1,0 +1,114 @@
+.menuBar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  padding: 0 20px;
+  overflow: hidden;
+  background-color: @background-color;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+}
+.transparent {
+  @media (min-width: 1020px) {
+    background-color: transparent !important;
+  }
+}
+
+.logo {
+  width: 150px;
+  float: left;
+}
+
+.logo a {
+  text-decoration: none;
+  display: inline-block;
+  font-size: 2.8rem;
+  padding: 5px 20px;
+  text-transform: capitalize;
+  color: @primary-color;
+  font-weight: bold;
+}
+.logo a:hover {
+  color: @primary-color;
+}
+
+.menuCon {
+  width: 100%;
+  float: left;
+  margin-left: 8rem;
+}
+
+.menuCon .ant-menu-item {
+  padding: 0px 0px;
+  margin: 0 5px !important;
+}
+
+.menuCon .ant-menu-horizontal {
+  border-bottom: none;
+}
+
+.menuCon .leftMenu {
+  float: left;
+}
+
+.menuCon .leftMenu {
+  li a {
+    color: white;
+    font-size: 18px !important;
+    border-color: transparent !important;
+  }
+}
+
+.menuCon .rightMenu {
+  float: right;
+}
+
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item:hover::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-active::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-selected::after {
+  border-bottom: 2px solid transparent !important;
+}
+
+.barsMenu {
+  float: right;
+  height: 32px;
+  padding: 6px;
+  margin-top: 0px;
+  background: transparent !important;
+  color: @white !important;
+  display: none !important;
+  font-size: 1.2rem !important;
+}
+
+.ant-drawer-content-wrapper {
+  width: 70vw !important;
+}
+.ant-drawer-header {
+  background-color: @background-color!important;
+}
+.ant-drawer-title {
+  color: @white;
+}
+
+.ant-drawer-body {
+  width: 100%;
+
+  padding: 0;
+  background-color: @background-color!important;
+}
+
+@media (max-width: 1020px) {
+  .barsMenu {
+    display: block !important;
+  }
+
+  .leftMenu,
+  .rightMenu {
+    display: none;
+  }
+
+  .logo a {
+    margin-left: -20px;
+  }
+}
