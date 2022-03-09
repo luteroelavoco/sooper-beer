@@ -1,19 +1,44 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import '../styles/pages/Home.less'
 import Head from 'next/head'
-import {Container} from '../styles/pages/Home';
-const Home: React.FC = () => {
+import { Typography } from 'antd'
+import { List } from '../components/List'
+import { Pagination } from '../components/Pagination'
+import { getBeers } from '../services/'
+import { useBeers } from "../context/beers"
+
+const { Title } = Typography
+
+function Index({ beers , update }) {
+  
+  const { setBeers  } = useBeers()
+  
+  useEffect(()=>{
+    if(update){
+      setBeers(beers)
+    }
+  },[beers, update])
 
   return (
-    <Container>
+    <div className="container-page-beers">
       <Head>
-        <title>Home Page</title>
+        <title>Sooper Beer</title>
       </Head>
-
-      <main>
-        <h1>Brevemente Disponível</h1>
-        <p>@Copyright 2020 Code Pro Inc. All rights reserved.</p>
-      </main>
-    </Container>
+      <Title>Variedades de cerveja é aqui na Sooper Beers</Title>
+      <List  />
+      <Pagination />
+    </div>
   )
 }
-export default Home
+
+export async function getServerSideProps({ query }) {
+  const { page = 1, beer_name, notfetch } = query
+  const { beers } = await getBeers(page, beer_name)
+  return {
+    props: {
+      beers,
+      update: notfetch ? false : true
+    }
+  }
+}
+export default Index
