@@ -13,7 +13,7 @@ export const Footer: React.FC = () => {
       <Text>
         Copyright (c) HeroAnime 2022 by
         <a href="https://www.linkedin.com/in/cientista1/" target="_blank">
-          Lutero Elavoco
+          {' '}Lutero Elavoco
         </a>
         . All rights reserved.
       </Text>
