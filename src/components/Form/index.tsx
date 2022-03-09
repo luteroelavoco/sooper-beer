@@ -6,7 +6,6 @@ import {
   message,
   Button,
   Space,
-  Col
 } from 'antd'
 import { beer } from '../../types/beer'
 import { useBeers } from "../../context/beers"
@@ -21,7 +20,7 @@ export const Form = () => {
   }
 
   return (
-    <Col className="form-section">
+    <section className="form-section">
       <FormAntd
         form={form}
         layout="vertical"
@@ -89,6 +88,6 @@ export const Form = () => {
           </Space>
         </FormAntd.Item>
       </FormAntd>
-    </Col>
+    </section>
   )
 }
