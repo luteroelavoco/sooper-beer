@@ -3,7 +3,7 @@
 
 This web-site was created to show a list of beers, enjoy the project.
 
-![](public/home_page.png)	
+![](public/home.png)	
 
 
 ## Instalation 	
