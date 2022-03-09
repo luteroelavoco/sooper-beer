@@ -24,7 +24,7 @@ function Index({ beers , update }) {
       <Head>
         <title>Sooper Beer</title>
       </Head>
-      <Title>Variedades de cerveja é aqui na Sooper Beers</Title>
+      <Title>Beer variety is here at Sooper Beers</Title>
       <List  />
       <Pagination />
     </div>
