@@ -14,7 +14,7 @@ export function RightMenu() {
       <Input
         className="input"
         value={query}
-        placeholder="Pesquisar cerveja"
+        placeholder="search beer"
         prefix={<SearchOutlined />}
         onChange={(e)=> debounce(setQuery(e.target.value),100)}
       />
